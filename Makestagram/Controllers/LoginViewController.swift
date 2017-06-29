@@ -12,7 +12,6 @@ import FirebaseAuthUI
 import FirebaseDatabase
 
 typealias FIRUser = FirebaseAuth.User
-//let user: FIRUser? = Auth.auth().currentUser
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
@@ -24,14 +23,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        // 1
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
         
-        // 2
         authUI.delegate = self
         
-        // 3
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
     }
@@ -45,19 +41,22 @@ extension LoginViewController: FUIAuthDelegate {
             assertionFailure("Error signing in: \(error.localizedDescription)")
         }
         
-        // 1
         guard let user = user
             else { return }
         
-        // 2
         let userRef = Database.database().reference().child("users").child(user.uid)
         
-        // 3
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
             if let user = User(snapshot: snapshot) {
                 print("Welcome back, \(user.username).")
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                
+                if let initialViewController = storyboard.instantiateInitialViewController() {
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
+                }
             } else {
-                print("New user!")
+                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
             }
         })
     }
