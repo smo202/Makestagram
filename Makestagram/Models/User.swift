@@ -31,6 +31,26 @@ class User {
         self.uid = snapshot.key
         self.username = username
     }
+    
+    private static var _current: User?
+    
+    // 2
+    static var current: User {
+        // 3
+        guard let currentUser = _current else {
+            fatalError("Error: current user doesn't exist")
+        }
+        
+        // 4
+        return currentUser
+    }
+    
+    // MARK: - Class Methods
+    
+    // 5
+    static func setCurrent(_ user: User) {
+        _current = user
+    }
 }
 
 
