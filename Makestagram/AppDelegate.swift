@@ -19,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        let initialViewController = UIStoryboard.initialViewController(for: .login)
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
+        configureInitialRootViewController(for: window)
         
         return true
     }
@@ -51,3 +49,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController : UIViewController
+        
+        if Auth.auth().currentUser != nil,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+            
+            User.setCurrent(user)
+            
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else {
+            initialViewController = UIStoryboard.initialViewController(for: .login)
+        }
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
+}

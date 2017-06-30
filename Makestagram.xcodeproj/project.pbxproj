@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C44A0021F03EB5E00F9E2E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44A0011F03EB5E00F9E2E0 /* AppDelegate.swift */; };
 		3C44A0091F03EB5E00F9E2E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C44A0081F03EB5E00F9E2E0 /* Assets.xcassets */; };
-		3CBE53171F03FB16004514B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE53161F03FB16004514B4 /* ViewController.swift */; };
+		3CBC36DD1F069068002CE17E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC36DC1F069068002CE17E /* HomeViewController.swift */; };
+		3CBC36DF1F069084002CE17E /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC36DE1F069084002CE17E /* FindFriendsViewController.swift */; };
 		3CBE53191F03FB20004514B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE53181F03FB20004514B4 /* LaunchScreen.storyboard */; };
 		3CBE531B1F03FB28004514B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE531A1F03FB28004514B4 /* Main.storyboard */; };
 		3CBE531F1F03FB35004514B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE531E1F03FB35004514B4 /* GoogleService-Info.plist */; };
@@ -28,7 +29,8 @@
 		3C449FFE1F03EB5E00F9E2E0 /* Makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C44A0011F03EB5E00F9E2E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C44A0081F03EB5E00F9E2E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3CBE53161F03FB16004514B4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		3CBC36DC1F069068002CE17E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		3CBC36DE1F069084002CE17E /* FindFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsViewController.swift; path = Controllers/FindFriendsViewController.swift; sourceTree = "<group>"; };
 		3CBE53181F03FB20004514B4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CBE531A1F03FB28004514B4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		3CBE531C1F03FB2F004514B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
@@ -100,9 +102,10 @@
 		3CBE53201F03FC7E004514B4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3CBE53161F03FB16004514B4 /* ViewController.swift */,
 				3CBE53311F04030D004514B4 /* LoginViewController.swift */,
 				3CDB996A1F05558000E74CBE /* CreateUsernameViewController.swift */,
+				3CBC36DC1F069068002CE17E /* HomeViewController.swift */,
+				3CBC36DE1F069084002CE17E /* FindFriendsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -288,9 +291,10 @@
 			files = (
 				3CDB99641F05434400E74CBE /* User.swift in Sources */,
 				3CBE53321F04030D004514B4 /* LoginViewController.swift in Sources */,
-				3CBE53171F03FB16004514B4 /* ViewController.swift in Sources */,
 				3CDB99721F05923E00E74CBE /* Storyboard+Utility.swift in Sources */,
+				3CBC36DD1F069068002CE17E /* HomeViewController.swift in Sources */,
 				3CDB996B1F05558000E74CBE /* CreateUsernameViewController.swift in Sources */,
+				3CBC36DF1F069084002CE17E /* FindFriendsViewController.swift in Sources */,
 				3CDB99701F0590DA00E74CBE /* Constants.swift in Sources */,
 				3CDB996D1F057B1E00E74CBE /* UserServices.swift in Sources */,
 				3C44A0021F03EB5E00F9E2E0 /* AppDelegate.swift in Sources */,
