@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FdV-h5-bhm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="mCH-4F-0PP">
+            <objects>
+                <viewController id="4Xm-03-OUF" customClass="HomeViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WnC-l5-AaO"/>
+                        <viewControllerLayoutGuide type="bottom" id="OfN-K9-pSk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jsD-0q-mxk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lMk-np-8WL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostImageCell" rowHeight="375" id="bhm-fk-Doe" customClass="PostImageCell" customModule="Makestagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="375"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bhm-fk-Doe" id="0BK-nU-rXK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-gu-gqQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HdP-gu-gqQ" firstAttribute="leading" secondItem="0BK-nU-rXK" secondAttribute="leading" id="Gbg-jH-pUE"/>
+                                                <constraint firstAttribute="bottom" secondItem="HdP-gu-gqQ" secondAttribute="bottom" id="PiL-ab-EgL"/>
+                                                <constraint firstItem="HdP-gu-gqQ" firstAttribute="top" secondItem="0BK-nU-rXK" secondAttribute="top" id="cVC-ok-gLZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="HdP-gu-gqQ" secondAttribute="trailing" id="sC0-El-l2w"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postImageView" destination="HdP-gu-gqQ" id="cOn-JF-CL3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Xm-03-OUF" id="UYW-X6-OGm"/>
+                                    <outlet property="delegate" destination="4Xm-03-OUF" id="aqg-L5-fnD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lMk-np-8WL" secondAttribute="trailing" id="E1Z-Vz-UvY"/>
+                            <constraint firstItem="lMk-np-8WL" firstAttribute="leading" secondItem="jsD-0q-mxk" secondAttribute="leading" id="UVu-zR-t3U"/>
+                            <constraint firstAttribute="bottom" secondItem="lMk-np-8WL" secondAttribute="bottom" id="bkO-Eo-zta"/>
+                            <constraint firstItem="lMk-np-8WL" firstAttribute="top" secondItem="jsD-0q-mxk" secondAttribute="top" id="iLf-6j-w4P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="au4-RL-oWV"/>
+                    <connections>
+                        <outlet property="tableView" destination="lMk-np-8WL" id="0sY-nY-7p7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usq-xO-iIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210.40000000000001" y="-682.3088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="06k-dL-pTR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FdV-h5-bhm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab_home_black" selectedImage="tab_home_black" id="ND0-jF-rh1">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAZ-1r-uup">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Xm-03-OUF" kind="relationship" relationship="rootViewController" id="Hsm-Qj-kmp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xtg-l9-GVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-585" y="-682"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_home_black" width="25" height="25"/>
+    </resources>
+</document>

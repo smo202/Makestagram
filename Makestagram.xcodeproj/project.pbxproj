@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C09A61E1F0A9F9C00CABA35 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C09A61D1F0A9F9C00CABA35 /* Home.storyboard */; };
+		3C09A6201F0ACFE600CABA35 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09A61F1F0ACFE600CABA35 /* PostImageCell.swift */; };
 		3C44A0021F03EB5E00F9E2E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C44A0011F03EB5E00F9E2E0 /* AppDelegate.swift */; };
 		3C44A0091F03EB5E00F9E2E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C44A0081F03EB5E00F9E2E0 /* Assets.xcassets */; };
 		3C495C141F0A87650086B6DB /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C495C131F0A87650086B6DB /* UIImage+Size.swift */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		093285253CFF6E24FEA388E8 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
+		3C09A61D1F0A9F9C00CABA35 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
+		3C09A61F1F0ACFE600CABA35 /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = Views/PostImageCell.swift; sourceTree = "<group>"; };
 		3C449FFE1F03EB5E00F9E2E0 /* Makestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C44A0011F03EB5E00F9E2E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C44A0081F03EB5E00F9E2E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				3CDB996E1F057B2400E74CBE /* Services */,
 				3CDB99731F05924400E74CBE /* Extensions */,
 				3CBC36E41F06C7D7002CE17E /* Helpers */,
+				3C09A61F1F0ACFE600CABA35 /* PostImageCell.swift */,
 			);
 			path = Makestagram;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			children = (
 				3CBE53331F040354004514B4 /* Login.storyboard */,
 				3CBE531A1F03FB28004514B4 /* Main.storyboard */,
+				3C09A61D1F0A9F9C00CABA35 /* Home.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 				3CBE531B1F03FB28004514B4 /* Main.storyboard in Resources */,
 				3CBE531F1F03FB35004514B4 /* GoogleService-Info.plist in Resources */,
 				3C44A0091F03EB5E00F9E2E0 /* Assets.xcassets in Resources */,
+				3C09A61E1F0A9F9C00CABA35 /* Home.storyboard in Resources */,
 				3CBE53341F040354004514B4 /* Login.storyboard in Resources */,
 				3CBE53191F03FB20004514B4 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -324,6 +331,7 @@
 				3C495C1E1F0A91CA0086B6DB /* PostService.swift in Sources */,
 				3CBC36E11F06A6CC002CE17E /* MainTabBarController.swift in Sources */,
 				3CDB99721F05923E00E74CBE /* Storyboard+Utility.swift in Sources */,
+				3C09A6201F0ACFE600CABA35 /* PostImageCell.swift in Sources */,
 				3C495C141F0A87650086B6DB /* UIImage+Size.swift in Sources */,
 				3CBC36DD1F069068002CE17E /* HomeViewController.swift in Sources */,
 				3CBC36E31F06C7AA002CE17E /* MGPhotoHelper.swift in Sources */,
