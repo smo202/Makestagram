@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func configureInitialRootViewController(for window: UIWindow?) {
         let defaults = UserDefaults.standard
-        let initialViewController : UIViewController
+        let initialViewController: UIViewController
         
         if Auth.auth().currentUser != nil,
             let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
@@ -64,6 +64,7 @@ extension AppDelegate {
         } else {
             initialViewController = UIStoryboard.initialViewController(for: .login)
         }
+        
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }

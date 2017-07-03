@@ -17,13 +17,6 @@ class User: NSObject {
     let username: String
     
     // MARK: - Init
-    
-    init(uid: String, username: String) {
-        self.uid = uid
-        self.username = username
-        super.init()
-    }
-    
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
             let username = dict["username"] as? String
@@ -34,12 +27,17 @@ class User: NSObject {
         super.init()
     }
     
+    init(uid: String, username: String) {
+        self.uid = uid
+        self.username = username
+        super.init()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
             let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String
-            else {
-                return nil
-        }
+            else { return nil }
+        
         self.uid = uid
         self.username = username
         
@@ -67,6 +65,7 @@ class User: NSObject {
             let data = NSKeyedArchiver.archivedData(withRootObject: user)
             UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
         }
+        _current = user
     }
 }
 

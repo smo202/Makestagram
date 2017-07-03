@@ -6,6 +6,7 @@
 //  Copyright © 2017 Jerry Lu. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class MGPhotoHelper: NSObject {
