@@ -15,6 +15,7 @@
 		3C495C1A1F0A8A3F0086B6DB /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C495C191F0A8A3F0086B6DB /* StorageReference+Post.swift */; };
 		3C495C1C1F0A91BD0086B6DB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C495C1B1F0A91BD0086B6DB /* Post.swift */; };
 		3C495C1E1F0A91CA0086B6DB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C495C1D1F0A91CA0086B6DB /* PostService.swift */; };
+		3C93C4291F0AE2370017100E /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C93C4281F0AE2370017100E /* PostHeaderCell.swift */; };
 		3CBC36DD1F069068002CE17E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC36DC1F069068002CE17E /* HomeViewController.swift */; };
 		3CBC36DF1F069084002CE17E /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC36DE1F069084002CE17E /* FindFriendsViewController.swift */; };
 		3CBC36E11F06A6CC002CE17E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC36E01F06A6CC002CE17E /* MainTabBarController.swift */; };
@@ -44,6 +45,7 @@
 		3C495C191F0A8A3F0086B6DB /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
 		3C495C1B1F0A91BD0086B6DB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
 		3C495C1D1F0A91CA0086B6DB /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = Services/PostService.swift; sourceTree = "<group>"; };
+		3C93C4281F0AE2370017100E /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = Views/PostHeaderCell.swift; sourceTree = "<group>"; };
 		3CBC36DC1F069068002CE17E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		3CBC36DE1F069084002CE17E /* FindFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsViewController.swift; path = Controllers/FindFriendsViewController.swift; sourceTree = "<group>"; };
 		3CBC36E01F06A6CC002CE17E /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Controllers/MainTabBarController.swift; sourceTree = "<group>"; };
@@ -114,9 +116,18 @@
 				3CDB996E1F057B2400E74CBE /* Services */,
 				3CDB99731F05924400E74CBE /* Extensions */,
 				3CBC36E41F06C7D7002CE17E /* Helpers */,
-				3C09A61F1F0ACFE600CABA35 /* PostImageCell.swift */,
+				3C93C4271F0AE21C0017100E /* Views */,
 			);
 			path = Makestagram;
+			sourceTree = "<group>";
+		};
+		3C93C4271F0AE21C0017100E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C09A61F1F0ACFE600CABA35 /* PostImageCell.swift */,
+				3C93C4281F0AE2370017100E /* PostHeaderCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		3CBC36E41F06C7D7002CE17E /* Helpers */ = {
@@ -341,6 +352,7 @@
 				3CBC36DF1F069084002CE17E /* FindFriendsViewController.swift in Sources */,
 				3CDB99701F0590DA00E74CBE /* Constants.swift in Sources */,
 				3CDB996D1F057B1E00E74CBE /* UserServices.swift in Sources */,
+				3C93C4291F0AE2370017100E /* PostHeaderCell.swift in Sources */,
 				3C44A0021F03EB5E00F9E2E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
