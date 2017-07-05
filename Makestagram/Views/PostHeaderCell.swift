@@ -11,6 +11,8 @@ import UIKit
 class PostHeaderCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     
+    static let height: CGFloat = 54
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
