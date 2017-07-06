@@ -19,9 +19,24 @@ struct FollowService {
         ref.updateChildValues(followData) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+                success(false)
             }
             
-            success(error == nil)
+            UserService.posts(for: user) { (posts) in
+                let postKeys = posts.flatMap { $0.key }
+                
+                var followData = [String : Any]()
+                let timelinePostDict = ["poster_uid" : user.uid]
+                postKeys.forEach { followData["timeline/\(currentUID)/\($0)"] = timelinePostDict }
+                
+                ref.updateChildValues(followData, withCompletionBlock: { (error, ref) in
+                    if let error = error {
+                        assertionFailure(error.localizedDescription)
+                    }
+                    
+                    success(error == nil)
+                })
+            }
         }
     }
     
@@ -34,9 +49,23 @@ struct FollowService {
         ref.updateChildValues(followData) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+                success(false)
             }
             
-            success(error == nil)
+            UserService.posts(for: user, completion: { (posts) in
+                let postKeys = posts.flatMap { $0.key }
+                
+                var unfollowData = [String : Any]()
+                postKeys.forEach { unfollowData["timeline/\(currentUID)/\($0)"] = NSNull() }
+                
+                ref.updateChildValues(unfollowData, withCompletionBlock: { (error, ref) in
+                    if let error = error {
+                        assertionFailure(error.localizedDescription)
+                    }
+                    
+                    success(error == nil)
+                })
+            })
         }
     }
     
