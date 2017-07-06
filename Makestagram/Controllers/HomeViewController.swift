@@ -8,7 +8,7 @@
 import Kingfisher
 import UIKit
 
-class HomeViewController: UIViewController{
+class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()

@@ -13,7 +13,7 @@ struct FollowService {
     private static func followUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
         let followData = ["followers/\(user.uid)/\(currentUID)" : true,
-                          "followers/\(currentUID)/\(user.uid)" : true]
+                          "following/\(currentUID)/\(user.uid)" : true]
         
         let ref = Database.database().reference()
         ref.updateChildValues(followData) { (error, _) in
@@ -28,7 +28,7 @@ struct FollowService {
     private static func unfollowUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
         let followData = ["followers/\(user.uid)/\(currentUID)" : NSNull(),
-                          "followers/\(currentUID)/\(user.uid)" : NSNull()]
+                          "following/\(currentUID)/\(user.uid)" : NSNull()]
         
         let ref = Database.database().reference()
         ref.updateChildValues(followData) { (error, ref) in
@@ -40,7 +40,7 @@ struct FollowService {
         }
     }
     
-    static func setIsFollowing(_ isFollowing: Bool, fromCurrentUser followee: User, success: @escaping (Bool) -> Void) {
+    static func setIsFollowing(_ isFollowing: Bool, fromCurrentUserTo followee: User, success: @escaping (Bool) -> Void) {
         if isFollowing {
             followUser(followee, forCurrentUserWithSuccess: success)
         } else {

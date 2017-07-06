@@ -45,7 +45,7 @@
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <action selector="followButtonTapped:" destination="rMX-Mu-q1X" eventType="touchUpInside" id="CPz-jc-HKG"/>
+                                                        <action selector="followButtonTapped:" destination="rMX-Mu-q1X" eventType="touchUpInside" id="pVx-he-8qK"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -60,13 +60,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="followButton" destination="1bH-N9-hQ2" id="L1j-ke-vEe"/>
-                                            <outlet property="usernameLabel" destination="fEY-te-Odb" id="Hkg-Lo-0Jc"/>
+                                            <outlet property="followButton" destination="1bH-N9-hQ2" id="vxg-sv-5eq"/>
+                                            <outlet property="usernameLabel" destination="fEY-te-Odb" id="0FH-Nc-4nR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="zfG-IU-vZU" id="whu-XW-YAS"/>
+                                    <outlet property="dataSource" destination="zfG-IU-vZU" id="x2r-Qb-Bg9"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -79,6 +79,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Find Friends" id="fwC-vG-jRH"/>
+                    <connections>
+                        <outlet property="tableView" destination="0yp-Hi-QmJ" id="waE-7R-xuv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Se-SN-ejf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
